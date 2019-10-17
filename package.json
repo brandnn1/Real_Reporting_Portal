@@ -23,6 +23,7 @@
     "json2csv": "^4.5.4",
     "mysql2": "^1.7.0",
     "node-gyp": "^6.0.0",
+    "node-pre-gyp": "^0.13.0",
     "sequelize": "^5.19.8"
   }
 }
