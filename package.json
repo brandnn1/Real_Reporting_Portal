@@ -1,0 +1,27 @@
+{
+  "name": "real_reporting_portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandnn1/Real_Reporting_Portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandnn1/Real_Reporting_Portal/issues"
+  },
+  "homepage": "https://github.com/brandnn1/Real_Reporting_Portal#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "json2csv": "^4.5.4",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.8"
+  }
+}
