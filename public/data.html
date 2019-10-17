@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Crime Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/datastyle.css" media="screen" title="no title">
+  <script src="./js/data.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $('.datepicker').datepicker({
+  dateFormat: "yy-mm-dd",
+  maxDate: new Date('2014-02-13'),
+  defaultDate: new Date('2010-01-02')
+ });
+ $('.datepicker2').datepicker({
+  dateFormat: "yy-mm-dd",
+  maxDate: new Date('2014-02-13')
+ });
+
+  } );
+  </script>
+</head>
+ 
+<body> 
+    <h3 style="text-align:center">Crime Data Locations</h3>
+
+<div class="container"> 
+<div class="col-sm-3" id="reportPick">
+  
+  <div>    
+    <br>
+    Crime Type:
+    <select class="chosen-select form-control" id="crimeType">
+      <option value = '[INC - CASE DC USE ONLY]'>[INC - CASE DC USE ONLY]</option>
+      <option value = 'ANIMAL COMPLAINT'>ANIMAL COMPLAINT</option>
+      <option value = 'ASSAULT'>ASSAULT</option>
+      <option value = 'BIAS INCIDENT'>BIAS INCIDENT</option>
+      <option value = 'BIKE THEFT'>BIKE THEFT</option>
+      <option value = 'BURGLARY'>BURGLARY</option>
+      <option value = 'BURGLARY-SECURE PARKING-RES'>BURGLARY-SECURE PARKING-RES</option>
+      <option value = 'CAR PROWL'>CAR PROWL</option>
+      <option value = 'COUNTERFEIT'>COUNTERFEIT</option>
+      <option value = 'DISORDERLY CONDUCT'>DISORDERLY CONDUCT</option>
+      <option value = 'DISPUTE'>DISPUTE</option>
+      <option value = 'DISTURBANCE'>DISTURBANCE</option>
+      <option value = 'DUI'>DUI</option>
+      <option value = 'ELUDING'>ELUDING</option>
+      <option value = 'EMBEZZLE'>EMBEZZLE</option>
+      <option value = 'ESCAPE'>ESCAPE</option>
+      <option value = 'EXTORTION'>EXTORTION</option>
+      <option value = 'FALSE REPORT'>FALSE REPORT</option>
+      <option value = 'FIREWORK'>FIREWORK</option>
+      <option value = 'FORGERY'>FORGERY</option>
+      <option value = 'FRAUD'>FRAUD</option>
+      <option value = 'FRAUD AND FINANCIAL'>FRAUD AND FINANCIAL</option>
+      <option value = 'GAMBLE'>GAMBLE</option>
+      <option value = 'HARBOR CALLS'>HARBOR CALLS</option>
+      <option value = 'HOMICIDE'>HOMICIDE</option>
+      <option value = 'ILLEGAL DUMPING'>ILLEGAL DUMPING</option>
+      <option value = 'INJURY'>INJURY</option>
+      <option value = 'LIQUOR VIOLATION'>LIQUOR VIOLATION</option>
+      <option value = 'LOITERING'>LOITERING</option>
+      <option value = 'LOST PROPERTY'>LOST PROPERTY</option>
+      <option value = 'MAIL THEFT'>MAIL THEFT</option>
+      <option value = 'NARCOTICS'>NARCOTICS</option>
+      <option value = 'OBSTRUCT'>OBSTRUCT</option>
+      <option value = 'OTHER PROPERTY'>OTHER PROPERTY</option>
+      <option value = 'PICKPOCKET'>PICKPOCKET</option>
+      <option value = 'PORNOGRAPHY'>PORNOGRAPHY</option>
+      <option value = 'PROPERTY DAMAGE'>PROPERTY DAMAGE</option>
+      <option value = 'PROSTITUTION'>PROSTITUTION</option>
+      <option value = 'PUBLIC NUISANCE'>PUBLIC NUISANCE</option>
+      <option value = 'PURSE SNATCH'>PURSE SNATCH</option>
+      <option value = 'RECKLESS BURNING'>RECKLESS BURNING</option>
+      <option value = 'RECOVERED PROPERTY'>RECOVERED PROPERTY</option>
+      <option value = 'ROBBERY'>ROBBERY</option>
+      <option value = 'SHOPLIFTING'>SHOPLIFTING</option>
+      <option value = 'STAY OUT OF AREA OF DRUGS'>STAY OUT OF AREA OF DRUGS</option>
+      <option value = 'STAY OUT OF AREA OF PROSTITUTION'>STAY OUT OF AREA OF PROSTITUTION</option>
+      <option value = 'STOLEN PROPERTY'>STOLEN PROPERTY</option>
+      <option value = 'THEFT OF SERVICES'>THEFT OF SERVICES</option>
+      <option value = 'THREATS'>THREATS</option>
+      <option value = 'TRAFFIC'>TRAFFIC</option>
+      <option value = 'TRESPASS'>TRESPASS</option>
+      <option value = 'VEHICLE THEFT'>VEHICLE THEFT</option>
+      <option value = 'VIOLATION OF COURT ORDER'>VIOLATION OF COURT ORDER</option>
+      <option value = 'WARRANT ARREST'>WARRANT ARREST</option>
+      <option value = 'WEAPON'>WEAPON</option>      
+    </select>
+    <br>
+    <p>Date From: <input type="text" id = "dateFrom" class="datepicker form-control"></p>
+    <p>Date To: <input type="text" id = "dateTo" class="datepicker2 form-control"></p>
+
+    District Sector:
+    <select class="chosen-select form-control" id="district">
+    <option value = ''></option>
+    <option value = 'Q'>Q</option>
+    <option value = 'K'>K</option>
+    <option value = 'D'>D</option>
+    <option value = 'E'>E</option>
+    <option value = 'M'>M</option>
+    <option value = 'O'>O</option>
+    <option value = 'C'>C</option>
+    <option value = 'F'>F</option>
+    <option value = 'G'>G</option>
+    <option value = 'R'>R</option>
+    <option value = 'N'>N</option>
+    <option value = 'B'>B</option>
+    <option value = 'S'>S</option>
+    <option value = 'J'>J</option>
+    <option value = 'L'>L</option>
+    <option value = 'W'>W</option>
+    <option value = 'U'>U</option>
+    <option value = '99'>99</option>
+  </select>    
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+        aria-hidden="true"></i>
+      Submit</button>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="downloadReport"><i class="fa fa-check-circle"
+      aria-hidden="true"></i>
+    Download CSV</button>
+
+  </div>
+
+</div>  
+<div class="col-sm-9" id=mapContainer >
+  <div id="map" style="height: 700px;  margin-left: auto;   margin-right: auto; "></div>
+</div>
+</div>
+<a class="btn btn-lg btn-block" href="/elections">Elections</a>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPnrEUe-GDsavDjTaLAaVR8bKZ15QOTVc&libraries=places"></script>
+</body>
+</html>

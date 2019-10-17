@@ -1,0 +1,72 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Presidential Elections</title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Visualization of state level political-party voting patterns in United States Presidential Elections from 1976 - 2016">
+        <meta name="author" content="Brandon Nelson">
+
+
+        <meta property="og:title" content="United States Presidential Election results" />
+
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/presStyle.css" media="screen" title="no title">
+
+        <script src="./js/d3.min.js"></script>
+
+        <script src="./js/elections.js"></script>
+        <script src="./js/fractions.js"></script>
+        <script src="./js/parties.js"></script>
+        <script src="./js/transitions.js"></script>
+        <script src="./js/states.js"></script>
+
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>Presidential Elections</h1>
+            <div id="diagram">
+                <svg>
+                    <defs>
+                    </defs>
+                    <g class="drawings">
+                        <g class="elections"></g>
+                        <g class="transitions">
+                            <g class="jump"></g>
+                            <g class="direct"></g>
+                        </g>
+                        <g class="fractions"></g>
+                    </g>
+                    <g class="hovers">
+                        <g class="hoverTransitions"></g>
+                        <g class="hoverFractions"></g>
+                    </g>
+                </svg>
+            </div>
+
+            <div id="rightPanel">
+                <div id="listHeader">
+                    <span id="supp"></span>
+                    <span id="title"></span>
+                    <span id="counter"></span>
+                    <span id="clear">
+                    </span>
+                </div>
+                <div class="states">
+                </div>
+            </div>
+
+            <div id="footer">
+                Data from <a href="https://dataverse.harvard.edu">MIT Election Data and Science Lab</a> |
+            </div>
+        </div>
+
+
+
+        <script>
+            draw(true);
+        </script>
+    </body>
+</html>
