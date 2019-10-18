@@ -107,8 +107,8 @@ module.exports = function(app) {
        var path = __dirname + '/../public/csv/file' + Date.now() + '.csv';
        fs.writeFile(path, csv, function () {
          console.log(path);
-         res.send(path) 
-         //res.download(path)
+         //res.send(path) 
+         res.download(path)
           
 
           //  link = document.createElement("a"); //create 'a' element
