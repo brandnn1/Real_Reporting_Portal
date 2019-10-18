@@ -101,13 +101,14 @@ module.exports = function(app) {
       
     }) // searching a user with the same username and password sent in req.body
       .then(function (report) {
-       var fields = ['id', 'RMS_CDW_ID', 'General_Offense_Number', 'Offense_Code', 'Offense_Code_Extension', 'Offense_Type', 'Summary_Offense_Code', 'Summarized_Offense_Description, Date_Reported', 'Occurred_Date_or_Date_Range_Start', 'Occurred_Date_Range_End', 'Hundred_Block_Location', 'District_Sector', 'Zone_Beat', 'Longitude', 'Latitude', 'Location', 'Date_Occurred', 'Date_Occurred_End'];
+       var fields = ['RMS_CDW_ID', 'General_Offense_Number', 'Offense_Code', 'Offense_Code_Extension', 'Offense_Type', 'Summary_Offense_Code', 'Summarized_Offense_Description, Date_Reported', 'Occurred_Date_or_Date_Range_Start', 'Occurred_Date_Range_End', 'Hundred_Block_Location', 'District_Sector', 'Zone_Beat', 'Longitude', 'Latitude', 'Location', 'Date_Occurred', 'Date_Occurred_End'];
        const json2csvParser = new Json2csvParser({ fields: fields});
        var csv = json2csvParser.parse(report)
        var path = __dirname + '/../public/csv/file' + Date.now() + '.csv';
        fs.writeFile(path, csv, function () {
          console.log(path);
-          res.send(path)
+         res.send(path) 
+         //res.download(path)
           
 
           //  link = document.createElement("a"); //create 'a' element

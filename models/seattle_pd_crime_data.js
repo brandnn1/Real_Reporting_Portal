@@ -2,6 +2,10 @@
 
 module.exports = function(sequelize, DataTypes) {
   const Data =  sequelize.define('seattle_pd_crime_data', {
+    id :{
+      type:DataTypes.INTEGER(11),
+      allowNull:false
+    },
     RMS_CDW_ID: {
       type: DataTypes.INTEGER(11),
       allowNull: false
