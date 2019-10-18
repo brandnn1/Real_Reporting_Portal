@@ -134,11 +134,19 @@ $(document).ready(function() {
                 map: map,
                 center: {lat:results[i].Latitude, lng:results[i].Longitude},
                 radius: 250,
-                title: results[i].Offense_Type
+                title: results[i].Date_Occurred
               });
-              circleObject.push(currentCircle)       
+              circleObject.push(currentCircle) 
+
+              google.maps.event.addListener(currentCircle, 'click', (function (currentCircle, i) {
+                return function () {
+                  infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
+                  infowindow.open(map, currentCircle);
+                }
+              })(currentCircle, i));
 
       }
+
 
       google.maps.event.addListener(map, 'zoom_changed', function() {
 
