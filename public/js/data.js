@@ -151,8 +151,10 @@ $(document).ready(function () {
 
           google.maps.event.addListener(currentCircle, 'click', (function (currentCircle, i) {
             return function () {
+              for (i = 0; i < circleObject.length; i++) {
               infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
-              infowindow.open(map, currentCircle);
+              infowindow.open(map, currentCircle[i]);
+              }
             }
           })(currentCircle, i));
 
