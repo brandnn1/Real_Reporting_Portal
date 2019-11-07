@@ -153,7 +153,7 @@ $(document).ready(function () {
             return function () {
               for (i = 0; i < circleObject.length; i++) {
               infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
-              infowindow.open(map, currentCircle[i]);
+              infowindow.open(map, circleObject[i]);
               }
             }
           })(currentCircle, i));
@@ -192,11 +192,12 @@ $(document).ready(function () {
       };
 
 
-
       google.maps.event.addListener(circleObject, 'click', (function (circleObject, i) {
         return function () {
+          for (i = 0; i < circleObject.length; i++) {
           infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
-          infowindow.open(map, circleObject);
+          infowindow.open(map, circleObject[i]);
+          }
         }
       })(circleObject, i));
 
