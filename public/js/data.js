@@ -190,13 +190,13 @@ $(document).ready(function () {
       };
 
 
-      google.maps.event.addListener(currentCircle, 'click', (function (currentCircle, i) {
+
+      google.maps.event.addListener(circleObject, 'click', (function (circleObject, i) {
         return function () {
           infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
-          infowindow.open(map, currentCircle);
+          infowindow.open(map, circleObject);
         }
-      })(currentCircle, i));
-
+      })(circleObject, i));
 
 
       //function to place markers on the map instead of circles. Think upside down red teardrops 
