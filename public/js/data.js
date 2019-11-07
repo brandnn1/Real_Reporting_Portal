@@ -149,12 +149,12 @@ $(document).ready(function () {
 
           circleObject.push(currentCircle)
 
-          google.maps.event.addListener(circleObject, 'click', (function (circleObject, i) {
+          google.maps.event.addListener(currentCircle, 'click', (function (currentCircle, i) {
             return function () {
               infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
-              infowindow.open(map, circleObject);
+              infowindow.open(map, currentCircle);
             }
-          })(circleObject, i));
+          })(currentCircle, i));
 
         }
 
@@ -174,23 +174,28 @@ $(document).ready(function () {
               circleObject[i].setRadius(25);
             } else if (zoomLevel === 16) {
               circleObject[i].setRadius(12);
-
             } else if (zoomLevel === 17) {
               circleObject[i].setRadius(6);
-
             } else if (zoomLevel === 18) {
               circleObject[i].setRadius(3);
-
             } else if (zoomLevel === 19) {
               circleObject[i].setRadius(2);
-
             } else if (zoomLevel === 20) {
               circleObject[i].setRadius(1);
-
+            } else if (zoomLevel === 21) {
+              circleObject[i].setRadius(0.5);
             } else circleObject[i].setRadius(600)
           }
         });
       };
+
+
+      google.maps.event.addListener(currentCircle, 'click', (function (currentCircle, i) {
+        return function () {
+          infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
+          infowindow.open(map, currentCircle);
+        }
+      })(currentCircle, i));
 
 
 
