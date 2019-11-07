@@ -16,31 +16,7 @@ var fs = require('fs');
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the posts
-  // app.get("/api/users/", function(req, res) {
-  //   db.User.findOne({
-  //     email = req.body.email
-  //   })
-  //     .then(function(dbUser) {
-  //       res.json(dbUser);
-  //     });
-  // });
 
-  
-
-  // Get route for returning posts of a specific category
-  // app.get("/api/users/category/:category", function(req, res) {
-  //   db.User.findAll({
-  //     where: {
-  //       category: req.params.category
-  //     }
-  //   })
-  //     .then(function(dbUser) {
-  //       res.json(dbUser);
-  //     });
-  // });
-
-  // Get route for retrieving a single post
 
   app.post("/api/users2/", function(req, res) {
     //console.log(req.body);
