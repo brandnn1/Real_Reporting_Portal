@@ -157,7 +157,7 @@ $(document).ready(function () {
           })(currentCircle, i));
 
         }
-
+        console.log(circleObject);
         //this is a bit of code that will activate when the user zooms in on the map. Each zoom level will change the size of the circle's radius. as you zoom in the circle
         //gets smaller in this case.
         google.maps.event.addListener(map, 'zoom_changed', function () {
