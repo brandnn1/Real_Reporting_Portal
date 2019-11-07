@@ -168,6 +168,28 @@ $(document).ready(function () {
           for (i = 0; i < circleObject.length; i++) {
             if (zoomLevel === 12) {
               circleObject[i].setRadius(250);
+            } else if (zoomLevel === 1) {
+              circleObject[i].setRadius(7000);
+            } else if (zoomLevel === 2) {
+              circleObject[i].setRadius(5500);
+            } else if (zoomLevel === 3) {
+              circleObject[i].setRadius(4500);
+            } else if (zoomLevel === 4) {
+              circleObject[i].setRadius(3500);
+            } else if (zoomLevel === 5) {
+              circleObject[i].setRadius(2750);
+            } else if (zoomLevel === 6) {
+              circleObject[i].setRadius(2000);
+            } else if (zoomLevel === 7) {
+              circleObject[i].setRadius(1500);
+            } else if (zoomLevel === 8) {
+              circleObject[i].setRadius(1000);
+            } else if (zoomLevel === 9) {
+              circleObject[i].setRadius(750);
+            } else if (zoomLevel === 10) {
+              circleObject[i].setRadius(500);
+            } else if (zoomLevel === 11) {
+              circleObject[i].setRadius(250);
             } else if (zoomLevel === 13) {
               circleObject[i].setRadius(125);
             } else if (zoomLevel === 14) {
@@ -192,14 +214,6 @@ $(document).ready(function () {
       };
 
 
-      google.maps.event.addListener(circleObject, 'click', (function (circleObject, i) {
-        return function () {
-          for (i = 0; i < circleObject.length; i++) {
-          infowindow.setContent('Date of Crime: ' + results[i].Date_Occurred);
-          infowindow.open(map, circleObject[i]);
-          }
-        }
-      })(circleObject, i));
 
 
       //function to place markers on the map instead of circles. Think upside down red teardrops 
