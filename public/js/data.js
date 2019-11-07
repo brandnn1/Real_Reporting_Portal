@@ -169,27 +169,27 @@ $(document).ready(function () {
             if (zoomLevel === 12) {
               circleObject[i].setRadius(250);
             } else if (zoomLevel === 1) {
-              circleObject[i].setRadius(7000);
+              circleObject[i].setRadius(512000);
             } else if (zoomLevel === 2) {
-              circleObject[i].setRadius(5500);
+              circleObject[i].setRadius(256000);
             } else if (zoomLevel === 3) {
-              circleObject[i].setRadius(4500);
+              circleObject[i].setRadius(128000);
             } else if (zoomLevel === 4) {
-              circleObject[i].setRadius(3500);
+              circleObject[i].setRadius(64000);
             } else if (zoomLevel === 5) {
-              circleObject[i].setRadius(2750);
+              circleObject[i].setRadius(32000);
             } else if (zoomLevel === 6) {
-              circleObject[i].setRadius(2000);
+              circleObject[i].setRadius(16000);
             } else if (zoomLevel === 7) {
-              circleObject[i].setRadius(1500);
+              circleObject[i].setRadius(8000);
             } else if (zoomLevel === 8) {
-              circleObject[i].setRadius(1000);
+              circleObject[i].setRadius(4000);
             } else if (zoomLevel === 9) {
-              circleObject[i].setRadius(750);
+              circleObject[i].setRadius(2000);
             } else if (zoomLevel === 10) {
-              circleObject[i].setRadius(500);
+              circleObject[i].setRadius(1000);
             } else if (zoomLevel === 11) {
-              circleObject[i].setRadius(250);
+              circleObject[i].setRadius(500);
             } else if (zoomLevel === 13) {
               circleObject[i].setRadius(125);
             } else if (zoomLevel === 14) {
